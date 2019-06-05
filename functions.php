@@ -9,6 +9,7 @@ function saveUser (string $first_name , string $last_name , string $email , stri
     }
 
     $row = sprintf("%s\t%s\t%s\t%s\n", $first_name ,  $last_name , $email , $password);
+
     fputs($file, $row);
     fclose($file);
 

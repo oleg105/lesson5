@@ -6,13 +6,14 @@ $first_name = '';
 $last_name = '';
 $email = '';
 $password = '';
+
 $message = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $parameters = ['first_name', 'last_name', 'email', 'password'];
     foreach ($parameters as $parameter) {
         if (empty($_POST[$parameter])) {
-            die('element not found');
+            die('Поле не заполнено.');
         }
     }
 
