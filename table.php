@@ -6,14 +6,14 @@
     }
     echo '<table border="1" cellpadding="12" cellspacing="0">';
 
-    while (feof ( $file) === false) {
+    while (feof ( $file) === false) {   //проверка конца файла
 
         $str = fgets($file);
         if (feof ( $file) === true) break;
 
         //echo $str;
         //echo "<br>";
-        $arr = explode("\t", $str);
+        $arr = explode("\t", $str);     //разбивка строки по пробелам
         //var_dump($arr);
 
         $first_name = $arr[0];
@@ -23,7 +23,7 @@
 
 
         echo '<tr> <td>'. $first_name .'</td> <td>'. $last_name .'</td> <td>'. $email .'</td> <td>'. $password .'</td> </tr>';
-    }
+    }   //отрисовка таблицы
     fclose($file);
 
 ?>
